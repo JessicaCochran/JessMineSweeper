@@ -1,0 +1,47 @@
+
+div.minesweeper-div {
+	display: inline-block;
+	border: 10px solid black;
+	padding: 12px;
+}
+
+div.header-div {
+	border: 6px solid black;
+	padding: 12px;
+}
+
+div.minefield-div {
+	border: 6px solid black;
+	border-top: 0px;
+}
+
+table.minefield-table button {
+	width: 22px;
+	height: 22px;
+}
+
+span.reset-span button {
+    display: inline-block;
+	width: 12%;
+	height: 22px;
+	background: url(img/smiley-face.svg);
+	background-color: lightgray;
+}
+
+span.minecounter-span {
+    display: inline-block;
+	width: 40%;
+	height: 22px;
+}
+
+span.timer-span {
+    display: inline-block;
+	text-align: right;
+	width: 40%;
+	height: 22px;
+}
+
+#notification-div {
+	padding: 12px;
+	height: 100px;
+}

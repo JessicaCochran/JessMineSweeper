@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mom's Minesweeper</title>
+		<link rel="stylesheet" type="text/css" href="jessStyle.css" />
+		<script type="text/javascript" src="jessJavascript.js"></script>
+	</head>
+	<body onload="onPageLoad();">
+		<h1>Mom's Minesweeper</h1>
+		<div class="minesweeper-div">
+			<div class="header-div">
+				<span id="minecounter-span" class="minecounter-span">
+					(MineCount)
+				</span>
+				<span class="reset-span">
+					<button id="reset-button" onclick="newGame();"></button>
+				</span>
+				<span id="timer-span" class="timer-span">
+					(Timer)
+				</span>
+			</div>
+			<div class="minefield-div">
+				<table class="minefield-table">
+					<tr>
+						<td><button id="row1col1" onclick="mineFieldAreaClicked(1,1);">&nbsp;</button></td>
+						<td><button id="row1col2" onclick="mineFieldAreaClicked(1,2);">&nbsp;</button></td>
+						<td><button id="row1col3" onclick="mineFieldAreaClicked(1,3);">&nbsp;</button></td>
+						<td><button id="row1col4" onclick="mineFieldAreaClicked(1,4);">&nbsp;</button></td>
+						<td><button id="row1col5" onclick="mineFieldAreaClicked(1,5);">&nbsp;</button></td>
+						<td><button id="row1col6" onclick="mineFieldAreaClicked(1,6);">&nbsp;</button></td>
+						<td><button id="row1col7" onclick="mineFieldAreaClicked(1,7);">&nbsp;</button></td>
+						<td><button id="row1col8" onclick="mineFieldAreaClicked(1,8);">&nbsp;</button></td>
+					</tr>
+					<tr>
+						<td><button id="row2col1" onclick="mineFieldAreaClicked(2,1);">&nbsp;</button></td>
+						<td><button id="row2col2" onclick="mineFieldAreaClicked(2,2);">&nbsp;</button></td>
+						<td><button id="row2col3" onclick="mineFieldAreaClicked(2,3);">&nbsp;</button></td>
+						<td><button id="row2col4" onclick="mineFieldAreaClicked(2,4);">&nbsp;</button></td>
+						<td><button id="row2col5" onclick="mineFieldAreaClicked(2,5);">&nbsp;</button></td>
+						<td><button id="row2col6" onclick="mineFieldAreaClicked(2,6);">&nbsp;</button></td>
+						<td><button id="row2col7" onclick="mineFieldAreaClicked(2,7);">&nbsp;</button></td>
+						<td><button id="row2col8" onclick="mineFieldAreaClicked(2,8);">&nbsp;</button></td>
+					</tr>
+					<tr>
+						<td><button id="row3col1" onclick="mineFieldAreaClicked(3,1);">&nbsp;</button></td>
+						<td><button id="row3col2" onclick="mineFieldAreaClicked(3,2);">&nbsp;</button></td>
+						<td><button id="row3col3" onclick="mineFieldAreaClicked(3,3);">&nbsp;</button></td>
+						<td><button id="row3col4" onclick="mineFieldAreaClicked(3,4);">&nbsp;</button></td>
+						<td><button id="row3col5" onclick="mineFieldAreaClicked(3,5);">&nbsp;</button></td>
+						<td><button id="row3col6" onclick="mineFieldAreaClicked(3,6);">&nbsp;</button></td>
+						<td><button id="row3col7" onclick="mineFieldAreaClicked(3,7);">&nbsp;</button></td>
+						<td><button id="row3col8" onclick="mineFieldAreaClicked(3,8);">&nbsp;</button></td>
+					</tr>
+					<tr>
+						<td><button id="row4col1" onclick="mineFieldAreaClicked(4,1);">&nbsp;</button></td>
+						<td><button id="row4col2" onclick="mineFieldAreaClicked(4,2);">&nbsp;</button></td>
+						<td><button id="row4col3" onclick="mineFieldAreaClicked(4,3);">&nbsp;</button></td>
+						<td><button id="row4col4" onclick="mineFieldAreaClicked(4,4);">&nbsp;</button></td>
+						<td><button id="row4col5" onclick="mineFieldAreaClicked(4,5);">&nbsp;</button></td>
+						<td><button id="row4col6" onclick="mineFieldAreaClicked(4,6);">&nbsp;</button></td>
+						<td><button id="row4col7" onclick="mineFieldAreaClicked(4,7);">&nbsp;</button></td>
+						<td><button id="row4col8" onclick="mineFieldAreaClicked(4,8);">&nbsp;</button></td>
+					</tr>
+					<tr>
+						<td><button id="row5col1" onclick="mineFieldAreaClicked(5,1);">&nbsp;</button></td>
+						<td><button id="row5col2" onclick="mineFieldAreaClicked(5,2);">&nbsp;</button></td>
+						<td><button id="row5col3" onclick="mineFieldAreaClicked(5,3);">&nbsp;</button></td>
+						<td><button id="row5col4" onclick="mineFieldAreaClicked(5,4);">&nbsp;</button></td>
+						<td><button id="row5col5" onclick="mineFieldAreaClicked(5,5);">&nbsp;</button></td>
+						<td><button id="row5col6" onclick="mineFieldAreaClicked(5,6);">&nbsp;</button></td>
+						<td><button id="row5col7" onclick="mineFieldAreaClicked(5,7);">&nbsp;</button></td>
+						<td><button id="row5col8" onclick="mineFieldAreaClicked(5,8);">&nbsp;</button></td>
+					</tr>
+					<tr>
+						<td><button id="row6col1" onclick="mineFieldAreaClicked(6,1);">&nbsp;</button></td>
+						<td><button id="row6col2" onclick="mineFieldAreaClicked(6,2);">&nbsp;</button></td>
+						<td><button id="row6col3" onclick="mineFieldAreaClicked(6,3);">&nbsp;</button></td>
+						<td><button id="row6col4" onclick="mineFieldAreaClicked(6,4);">&nbsp;</button></td>
+						<td><button id="row6col5" onclick="mineFieldAreaClicked(6,5);">&nbsp;</button></td>
+						<td><button id="row6col6" onclick="mineFieldAreaClicked(6,6);">&nbsp;</button></td>
+						<td><button id="row6col7" onclick="mineFieldAreaClicked(6,7);">&nbsp;</button></td>
+						<td><button id="row6col8" onclick="mineFieldAreaClicked(6,8);">&nbsp;</button></td>
+					</tr>
+					<tr>
+						<td><button id="row7col1" onclick="mineFieldAreaClicked(7,1);">&nbsp;</button></td>
+						<td><button id="row7col2" onclick="mineFieldAreaClicked(7,2);">&nbsp;</button></td>
+						<td><button id="row7col3" onclick="mineFieldAreaClicked(7,3);">&nbsp;</button></td>
+						<td><button id="row7col4" onclick="mineFieldAreaClicked(7,4);">&nbsp;</button></td>
+						<td><button id="row7col5" onclick="mineFieldAreaClicked(7,5);">&nbsp;</button></td>
+						<td><button id="row7col6" onclick="mineFieldAreaClicked(7,6);">&nbsp;</button></td>
+						<td><button id="row7col7" onclick="mineFieldAreaClicked(7,7);">&nbsp;</button></td>
+						<td><button id="row7col8" onclick="mineFieldAreaClicked(7,8);">&nbsp;</button></td>
+					</tr>
+					<tr>
+						<td><button id="row8col1" onclick="mineFieldAreaClicked(8,1);">&nbsp;</button></td>
+						<td><button id="row8col2" onclick="mineFieldAreaClicked(8,2);">&nbsp;</button></td>
+						<td><button id="row8col3" onclick="mineFieldAreaClicked(8,3);">&nbsp;</button></td>
+						<td><button id="row8col4" onclick="mineFieldAreaClicked(8,4);">&nbsp;</button></td>
+						<td><button id="row8col5" onclick="mineFieldAreaClicked(8,5);">&nbsp;</button></td>
+						<td><button id="row8col6" onclick="mineFieldAreaClicked(8,6);">&nbsp;</button></td>
+						<td><button id="row8col7" onclick="mineFieldAreaClicked(8,7);">&nbsp;</button></td>
+						<td><button id="row8col8" onclick="mineFieldAreaClicked(8,8);">&nbsp;</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="notification-div">
+			<h1 id="notification-h1"></h1>
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+      <div>
+        <h3>Credits</h3>
+		Created By: Jessica Cochran
+		<br />
+		Inspiration: Mom
+		<br />
+		Tutor: Dustin Culler
+		<br />
+        Smiley Images: <a href="https://www.emojione.com/emoji/v2" target="_blank">EmojiOne v2</a>
+      </div>
+	</body>
+</html>
